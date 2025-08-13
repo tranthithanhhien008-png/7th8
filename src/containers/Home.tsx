@@ -19,7 +19,7 @@ export default function Home() {
       <More1 />
       <More2 />
       <More3 />
-      <Footer />
+      
     </div>
   );
 }
