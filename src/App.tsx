@@ -10,6 +10,7 @@ import Giaycuoi from "./viewstrangphu/Giaycuoi";
 import { UserProvider } from "./component/UserContext";
 import ProductDetailPage from "./viewstrangphu/trangchitiet";
 import Home from "./containers/Home";
+import CartPage from "./component/CartPage";
 function App() {
   return (
     <UserProvider>
@@ -25,7 +26,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/Register" element={<Register />} />
           <Route path="/*" element={<DefaultLayout  child={<Home/>}/>} />
-          
+          <Route path="/giohang" element={<DefaultLayout  child={<CartPage/>}/>} />
         </Routes>
     </UserProvider>
   );
