@@ -10,6 +10,7 @@ export interface Product {
   rating?: number;      
   shortDesc?: string;   
   tags?: string[];
+  category?: string;
 }
 
 interface LuxuryBridalCardProps {
@@ -35,7 +36,7 @@ const navigate=useNavigate();
   };
 
   return (
-    <div className={`card h-100 shadow-sm border-0 ${className}`} style={{ borderRadius: 12 }}>
+    <div className={`card h-100 shadow-sm border-0 ${className}`} style={{ borderRadius: 12, marginBottom: "24px",boxShadow: "0 16px 20px rgba(0, 0, 0, 0.15) " }}>
       <div className="position-relative">
         <img
           src={product.images?.[0] || "/placeholder.jpg"}

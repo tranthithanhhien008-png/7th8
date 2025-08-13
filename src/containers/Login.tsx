@@ -20,12 +20,20 @@ const Login: React.FC = () => {
     }
 
     const parsedUser = JSON.parse(storedUser);
-    if (parsedUser.email === email && parsedUser.password === password) {
-  setUser({ fullName: parsedUser.fullName, email: parsedUser.email });
+  if (parsedUser.email === email && parsedUser.password === password) {
+  const loggedInUser = { fullName: parsedUser.fullName, email: parsedUser.email };
+  
+  // Lưu vào context
+  setUser(loggedInUser);
+
+  // Lưu vào localStorage để tự động đăng nhập lần sau
+  localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+
   navigate("/");
 } else {
-      alert("Email hoặc mật khẩu không đúng!");
-    }
+  alert("Email hoặc mật khẩu không đúng!");
+}
+
   };
 
   return (
