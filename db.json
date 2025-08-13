@@ -320,5 +320,24 @@
   "category": "phu-kien-vuongmien"
   }
   ],
+
    "users": []
+
+
+  "cart": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "items": [
+        {
+          "id": 1,
+          "name": "Áo cưới Haute Couture",
+          "images": ["/damcuoi/vaycuoi1.jpg"],
+          "price": 42000000,
+          "quantity":1
+        }
+      ]
+    }
+  ]
+
 }

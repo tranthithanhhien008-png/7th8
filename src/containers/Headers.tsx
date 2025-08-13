@@ -92,8 +92,10 @@ const Headers: React.FC = () => {
             )}
 
             <li className="nav-item">
-              <a className="nav-link" href="#"><i className="bi bi-cart3"></i></a>
+                <Link className="nav-link" to={`/giohang?user_id=${1}`} ><i className="bi bi-cart3"></i> Giỏ hàng</Link>
             </li>
+
+
              <li className="nav-item">
               <a className="nav-link" href="#"><i className="bi bi-headset"></i></a>
             </li>
