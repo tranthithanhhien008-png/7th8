@@ -1,25 +1,38 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register: React.FC = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // ✅ quản lý ẩn/hiện mật khẩu
+  const [showPassword, setShowPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
-    const newUser = { fullName, email, phone, password };
-    localStorage.setItem("registeredUser", JSON.stringify(newUser));
-
-    alert("Đăng ký thành công! Hãy đăng nhập.");
-    navigate("/Login");
+    try {
+      // Gửi request đăng ký đến API
+      const res = await axios.post("http://localhost:3000/api/register", {
+        fullName,
+        email,
+        phone,
+        password,
+      });
+        
+    console.log("Kết quả từ API:", res.data);
+      alert(res.data.message || "Đăng ký thành công! Hãy đăng nhập.");
+      navigate("/Login");
+    } catch (error: any) {
+      alert(error.response?.data?.message || "Đăng ký thất bại! Vui lòng thử lại.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -63,7 +76,7 @@ const Register: React.FC = () => {
           <label>Mật khẩu:</label>
           <div className="input-group">
             <input
-              type={showPassword ? "text" : "password"} // ✅ đổi type khi bấm
+              type={showPassword ? "text" : "password"}
               className="form-control"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -74,17 +87,23 @@ const Register: React.FC = () => {
               className="btn btn-outline-secondary"
               onClick={() => setShowPassword(!showPassword)}
             >
-              {showPassword ? <i className="bi bi-eye"></i> : <i className="bi bi-eye-slash"></i>}
+              {showPassword ? (
+                <i className="bi bi-eye"></i>
+              ) : (
+                <i className="bi bi-eye-slash"></i>
+              )}
             </button>
           </div>
         </div>
 
-        <button type="submit" className="btn btn-success w-100">
-          Đăng ký
+        <button type="submit" className="btn btn-success w-100" disabled={loading}>
+          {loading ? "Đang đăng ký..." : "Đăng ký"}
         </button>
       </form>
       <div className="mt-3 text-center">
-        <p>Đã có tài khoản ? hãy <Link to="/Login">Đăng nhập ngay</Link></p>
+        <p>
+          Đã có tài khoản ? hãy <Link to="/Login">Đăng nhập ngay</Link>
+        </p>
       </div>
     </div>
   );

@@ -1,39 +1,40 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUser } from "../component/UserContext";
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
   const { setUser } = useUser();
   const navigate = useNavigate();
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Lấy thông tin user đã đăng ký từ localStorage
-    const storedUser = localStorage.getItem("registeredUser");
-    if (!storedUser) {
-      alert("Bạn chưa có tài khoản! Hãy đăng ký trước.");
-      return;
+    try {
+      const res = await fetch("http://localhost:3000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.message || "Đăng nhập thất bại!");
+        return;
+      }
+
+      // ✅ Lưu vào localStorage và context
+      localStorage.setItem("currentUser", JSON.stringify(data.user));
+      setUser(data.user);
+
+      alert("Đăng nhập thành công!");
+      navigate("/"); // về trang chủ
+    } catch (error) {
+      console.error("Lỗi:", error);
+      alert("Không thể kết nối server!");
     }
-
-    const parsedUser = JSON.parse(storedUser);
-  if (parsedUser.email === email && parsedUser.password === password) {
-  const loggedInUser = { fullName: parsedUser.fullName, email: parsedUser.email };
-  
-  // Lưu vào context
-  setUser(loggedInUser);
-
-  // Lưu vào localStorage để tự động đăng nhập lần sau
-  localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-
-  navigate("/");
-} else {
-  alert("Email hoặc mật khẩu không đúng!");
-}
-
   };
 
   return (
@@ -53,30 +54,19 @@ const Login: React.FC = () => {
 
         <div className="mb-3">
           <label>Mật khẩu:</label>
-        <div className="input-group">
-            <input
-              type={showPassword ? "text" : "password"} // ✅ đổi type khi bấm
-              className="form-control"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <button
-              type="button"
-              className="btn btn-outline-secondary"
-              onClick={() => setShowPassword(!showPassword)}
-            >
-              {showPassword ? <i className="bi bi-eye"></i> : <i className="bi bi-eye-slash"></i>}
-            </button>
-          </div>
+          <input
+            type="password"
+            className="form-control"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
 
-        <button type="submit" className="btn btn-primary w-100">Đăng nhập</button>
+        <button type="submit" className="btn btn-success w-100">
+          Đăng nhập
+        </button>
       </form>
-
-      <div className="mt-3 text-center">
-        <p>Chưa có tài khoản ? hãy <Link to="/Register">Đăng ký ngay</Link></p>
-      </div>
     </div>
   );
 };
