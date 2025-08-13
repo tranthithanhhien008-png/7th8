@@ -1,195 +1,137 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import LuxuryBridalCard, { Product } from "../component/LuxuryBridalCard";
 import Headers from "../containers/Headers";
-import LuxuryBridalCard from "../component/LuxuryBridalCard";
 
-const Aodaicuoi = () => {
-    const products = [
-    {
-      id: 1,
-      name: "Áo Dài Ngọc Tâm",
-      images: ["/aodai/aodai1.jpg"], // ảnh nằm trong public/damcuoi
-      price: 9000000,
-      oldPrice: 14000000,
-      rating: 4.8,
-      shortDesc:
-        "Lụa trắng thanh khiết, thêu tay tinh xảo, tôn nét dịu dàng cho cô dâu ngày vu quy.",
-      tags: ["Handmade", "Limited"]
-    },
-    {
-      id: 2,
-      name: "Áo Dài Phượng Vân",
-      images: ["/aodai/aodai2.jpg"], // ảnh nằm trong public/damcuoi
-      price: 10000000,
-      rating: 4.8,
-      shortDesc:
-        "Sắc đỏ rực rỡ, thêu tay họa tiết phượng hoàng và hoa văn tinh xảo. Tà áo mềm mại, tôn vẻ kiêu sa và quyền quý cho cô dâu.",
-      tags: ["Handmade", "Limited"]
-    },
-     {
-      id: 3,
-      name: "Áo Dài Phượng Vân & Áo Gấm Thiên Hồng",
-      images: ["/aodai/aodai4.jpg"], // ảnh nằm trong public/damcuoi
-      price: 8000000,
-      rating: 4.8,
-      shortDesc:
-        "Cặp áo cưới truyền thống sắc hồng pastel, thêu tay họa tiết hoa và chim phượng tinh xảo. Tà áo mềm mại, tôn nét thanh lịch và sang trọng cho cô dâu – chú rể",
-      tags: ["Handmade", "Limited"]
-    },
-    {
-      id: 4,
-      name: "Áo Dài Cưới Bảo Vân",
-      images: ["/aodai/aodai5.jpg"], // ảnh nằm trong public/damcuoi
-      price: 27000000,
-      oldPrice: 32000000,
-      rating: 4.8,
-      shortDesc:
-        "Sắc đỏ quyền quý, thêu hoa và lông vũ tinh xảo cho cô dâu, phối tua rua truyền thống cho chú rể, mây lành nâng bước, khởi đầu viên mãn cho đôi uyên ương.",
-      tags: ["Handmade", "Limited"]
-    },
-    {
-      id: 5,
-      name: "Áo Dài Cưới Hồng Long",
-      images: ["/aodai/aodai6.jpg"], // ảnh nằm trong public/damcuoi
-      price: 5000000,
-      rating: 4.8,
-      shortDesc:
-        "Cặp áo dài đỏ thêu phượng hoàng tinh xảo, tôn vẻ kiêu sa và trang trọng. Thiết kế truyền thống cho lễ vu quy đậm chất văn hóa Việt.",
-      tags: ["Handmade", "Limited"]
-    },
-     {
-      id: 6,
-      name: "Áo Dài Cưới Hồng Phụng",
-      images: ["/aodai/aodai7.jpg"], // ảnh nằm trong public/damcuoi
-      price: 10000000,
-      rating: 4.8,
-      shortDesc:
-      
-        "Cặp áo dài sắc hồng pastel, thêu rồng và hoa đỏ nổi bật. Thiết kế cổ cao, tay dài, tôn vẻ trang nghiêm và thanh lịch.",
-      tags: ["Handmade", "Limited"]
-    },
-     {
-      id: 7,
-      name: "Áo Dài Cưới Kim Phụng",
-      images: ["/aodai/aodai8.jpg"], // ảnh nằm trong public/damcuoi
-      price: 12000000,
-      rating: 4.8,
-      shortDesc:
-        "Thiết kế sắc đỏ quyền quý, thêu phượng hoàng và hoa văn tinh xảo. Tà áo mềm mại, phối mấn truyền thống, tôn vẻ kiêu sa và trang trọng cho cô dâu – chú rể.",
-      tags: ["Handmade", "Limited"]
-    },
-  ]
+export default function Aodaicuoi() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 6;
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [sortOrder, setSortOrder] = useState("");
-    const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
-    const itemsPerPage = 6; // số sản phẩm mỗi trang
-  
-    const handleView = (p: any) => alert(`Xem chi tiết: ${p.name}`);
-    const handleAdd = (p: any) => alert(`Đã thêm: ${p.name}`);
-  
-    const filteredProducts = products
-      .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
-      .sort((a, b) => {
-        if (sortOrder === "asc") return a.price - b.price;
-        if (sortOrder === "desc") return b.price - a.price;
-        return 0;
-      });
-  
-    // Tính toán dữ liệu phân trang
-    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const currentProducts = filteredProducts.slice(
-      startIndex,
-      startIndex + itemsPerPage
-    );
+  useEffect(() => {
+    axios.get<Product[]>("http://localhost:3001/products")
+      .then((res) => {
+        // Lọc chỉ lấy áo dài cưới
+        const aoDaiOnly = res.data.filter(
+          (item) => item.category && item.category.toLowerCase() === "ao-dai"
+        );
+        setProducts(aoDaiOnly);
+      })
+      .catch((err) => console.error("Lỗi khi gọi API:", err));
+  }, []);
+
+  const filteredProducts = products
+    .filter((p) => p.name.toLowerCase().includes(searchTerm.toLowerCase()))
+    .sort((a, b) => {
+      if (sortOrder === "asc") return a.price - b.price;
+      if (sortOrder === "desc") return b.price - a.price;
+      return 0;
+    });
+
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const currentProducts = filteredProducts.slice(
+    (currentPage - 1) * productsPerPage,
+    currentPage * productsPerPage
+  );
 
   return (
     <>
       <Headers />
-      <div className="container py-5">
-        <h2 className="text-center mb-4">Bộ Sưu Tập Áo Dài Cưới Thanh Lịch</h2>
-
-        {/* Tìm kiếm và lọc */}
-       <div className="d-flex justify-content-between align-items-center mb-4 gap-2">
-  <input
-    type="text"
-    placeholder="Tìm kiếm..."
-    className="form-control form-control-sm" 
-    style={{ maxWidth: 220 }} 
-    value={searchTerm}
-    onChange={(e) => setSearchTerm(e.target.value)}
-  />
-  <select
-    className="form-select form-select-sm" 
-    style={{ maxWidth: 180 }} 
-    value={sortOrder}
-    onChange={(e) => setSortOrder(e.target.value)}
-  >
-    <option value="">Sắp xếp theo giá</option>
-    <option value="asc">Giá thấp → cao</option>
-    <option value="desc">Giá cao → thấp</option>
-  </select>
-</div>
+      <div className="container mt-4">
+        {/* Tiêu đề + thanh tìm kiếm/ lọc */}
+        <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <h2 className="mb-0">Áo Dài Cưới</h2>
+          <div className="d-flex gap-2">
+            <input
+              type="text"
+              className="form-control form-control-sm"
+              placeholder="Tìm kiếm..."
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
+              style={{ maxWidth: "180px" }}
+            />
+            <select
+              className="form-select form-select-sm"
+              value={sortOrder}
+              onChange={(e) => {
+                setSortOrder(e.target.value);
+                setCurrentPage(1);
+              }}
+              style={{ maxWidth: "150px" }}
+            >
+              <option value="">Sắp xếp</option>
+              <option value="asc">Giá ↑</option>
+              <option value="desc">Giá ↓</option>
+            </select>
+          </div>
+        </div>
 
         {/* Danh sách sản phẩm */}
-        <div className="row g-4">
-          {filteredProducts.map((p) => (
+        <div className="row">
+          {currentProducts.map((p) => (
             <div key={p.id} className="col-md-6 col-lg-4">
               <LuxuryBridalCard
                 product={p}
-                onView={handleView}
-                onAddToCart={handleAdd}
+                onView={() => console.log("Xem sản phẩm:", p.name)}
+                onAddToCart={() => console.log("Thêm vào giỏ:", p.name)}
               />
             </div>
           ))}
         </div>
+
+        {/* Nút phân trang */}
           <nav className="mt-4">
-        <ul className="pagination justify-content-center">
-  <li className="page-item">
-    <button 
-      className="page-link" 
-      style={{ color: "black" }} 
-      onClick={() => setCurrentPage(currentPage - 1)} 
-      disabled={currentPage === 1}
-    >
-      Trước
-    </button>
-  </li>
+          <ul className="pagination justify-content-center">
+            <li className="page-item">
+              <button
+                className="page-link"
+                style={{ color: "black" }}
+                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Trước
+              </button>
+            </li>
 
-  {[...Array(totalPages)].map((_, i) => (
-    <li 
-      key={i} 
-      className={`page-item ${currentPage === i + 1 ? "active" : ""}`}
-    >
-      <button 
-        className="page-link" 
-        style={{
-          color: currentPage === i + 1 ? "white" : "black",
-          backgroundColor: currentPage === i + 1 ? "black" : "transparent",
-          borderColor: currentPage === i + 1 ? "black" : "#dee2e6"
-        }}
-        onClick={() => setCurrentPage(i + 1)}
-      >
-        {i + 1}
-      </button>
-    </li>
-  ))}
+            {[...Array(totalPages)].map((_, i) => (
+              <li
+                key={i}
+                className={`page-item ${currentPage === i + 1 ? "active" : ""}`}
+              >
+                <button
+                  className="page-link"
+                  style={{
+                    color: currentPage === i + 1 ? "white" : "black",
+                    backgroundColor:
+                      currentPage === i + 1 ? "black" : "transparent",
+                    borderColor:
+                      currentPage === i + 1 ? "black" : "#dee2e6",
+                  }}
+                  onClick={() => setCurrentPage(i + 1)}
+                >
+                  {i + 1}
+                </button>
+              </li>
+            ))}
 
-  <li className="page-item">
-    <button 
-      className="page-link" 
-      style={{ color: "black" }} 
-      onClick={() => setCurrentPage(currentPage + 1)} 
-      disabled={currentPage === totalPages}
-    >
-      Sau
-    </button>
-  </li>
-</ul>
-</nav>
+            <li className="page-item">
+              <button
+                className="page-link"
+                style={{ color: "black" }}
+                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                Sau
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </>
   );
-};
-    export default Aodaicuoi;
+}

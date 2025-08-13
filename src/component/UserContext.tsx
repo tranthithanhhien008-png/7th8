@@ -13,8 +13,11 @@ interface UserContextType {
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
-  return (
+  const [user, setUser] = useState<User | null>(() => {
+    const savedUser = localStorage.getItem("loggedInUser");
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+   return (
     <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>

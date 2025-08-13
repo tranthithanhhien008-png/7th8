@@ -8,7 +8,8 @@
       "oldPrice": 52000000,
       "rating": 4.8,
       "shortDesc": "Vải organza cao cấp, thêu tay tinh xảo, vừa vặn hoàn hảo cho cô dâu sang trọng.",
-      "tags": ["Handmade", "Limited"]
+      "tags": ["Handmade", "Limited"],
+      "category": "dam-cuoi"
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
       "price": 52000000,
       "rating": 4.9,
       "shortDesc": "Thiết kế dáng công chúa với phần ngực đính pha lê và ren bạc tinh xảo, tay voan mỏng nhẹ tạo vẻ kiêu sa và lộng lẫy.",
-      "tags": ["Luxury", "Royal", "Princess"]
+      "tags": ["Luxury", "Royal", "Princess"],
+      "category": "dam-cuoi"
     },
     {
       "id": 3,
@@ -26,7 +28,8 @@
       "price": 35000000,
       "rating": 4.7,
       "shortDesc": "Áo cưới phong cách cổ điển với chất liệu ren cao cấp và đường may tinh tế.",
-      "tags": ["Vintage", "Elegant"]
+      "tags": ["Vintage", "Elegant"],
+      "category": "dam-cuoi"
     },
     {
       "id": 4,
@@ -35,7 +38,8 @@
       "price": 49000000,
       "rating": 4.8,
       "shortDesc": "Váy cưới tông hồng pastel sang trọng, phủ họa tiết hoa 3D nổi mềm mại, mang lại vẻ ngọt ngào và quý phái.",
-      "tags": ["Luxury", "Floral", "Romantic"]
+      "tags": ["Luxury", "Floral", "Romantic"],
+      "category": "dam-cuoi"
     },
     {
       "id": 5,
@@ -45,7 +49,8 @@
       "oldPrice": 46000000,
       "rating": 4.9,
       "shortDesc": "Váy cưới satin trắng bóng trễ vai, điểm ren hoa nổi tinh tế ở tà, tôn lên dáng vẻ thanh lịch và đẳng cấp.",
-      "tags": ["Luxury", "Satin", "Elegant"]
+      "tags": ["Luxury", "Satin", "Elegant"],
+      "category": "dam-cuoi"
     },
     {
       "id": 6,
@@ -54,7 +59,8 @@
       "price": 53000000,
       "rating": 5.0,
       "shortDesc": "Váy cưới xếp tầng voan kim tuyến lấp lánh, phần ngực đính pha lê và ren cao cấp tạo hiệu ứng nổi bật trên sân khấu.",
-      "tags": ["Luxury", "Sparkle", "Glamorous"]
+      "tags": ["Luxury", "Sparkle", "Glamorous"],
+      "category": "dam-cuoi"
     },
     {
       "id": 7,
@@ -63,7 +69,8 @@
       "price": 44000000,
       "rating": 4.7,
       "shortDesc": "Thiết kế satin trắng trơn với dáng công chúa tối giản, tập trung vào form váy hoàn hảo và độ bóng mềm mại của chất liệu cao cấp.",
-      "tags": ["Luxury", "Minimalist", "Princess"]
+      "tags": ["Luxury", "Minimalist", "Princess"],
+      "category": "dam-cuoi"
     },
     {
       "id": 8,
@@ -72,7 +79,8 @@
       "price": 51000000,
       "rating": 4.9,
       "shortDesc": "Váy cưới trắng ngà với phần ngực và eo được trang trí ren cổ điển, chân váy phồng mang phong cách hoàng gia quyền quý.",
-      "tags": ["Luxury", "Royal", "Lace"]
+      "tags": ["Luxury", "Royal", "Lace"],
+      "category": "dam-cuoi"
     },
     {
       "id": 9,
@@ -81,7 +89,8 @@
       "price": 38000000,
       "rating": 4.7,
       "shortDesc": "Váy cưới tay dài bằng voan mỏng, phối ren họa tiết cổ điển và tùng váy bồng nhẹ tạo cảm giác vừa thanh lịch vừa hoài cổ.",
-      "tags": ["Vintage", "Voan", "Thanh lịch"]
+      "tags": ["Vintage", "Voan", "Thanh lịch"],
+      "category": "dam-cuoi"
     },
     {
       "id": 10,
@@ -90,7 +99,8 @@
       "price": 45000000,
       "rating": 4.9,
       "shortDesc": "Chiếc váy tinh tế với những bông hoa 3D trắng ngọc nổi bật trên nền voan trong suốt, mang lại vẻ đẹp nữ thần và sang trọng tuyệt đối.",
-      "tags": ["Hoa 3D", "Sang trọng", "Voan"]
+      "tags": ["Hoa 3D", "Sang trọng", "Voan"],
+      "category": "dam-cuoi"
     },
     {
       "id": 11,
@@ -99,7 +109,8 @@
       "price": 41000000,
       "rating": 4.8,
       "shortDesc": "Thiết kế cổ yếm khoe bờ vai, tùng váy xếp tầng mềm mại tạo hiệu ứng bay bổng và sang trọng trong từng bước di chuyển.",
-      "tags": ["Xếp tầng", "Cổ yếm", "Sang trọng"]
+      "tags": ["Xếp tầng", "Cổ yếm", "Sang trọng"],
+      "category": "dam-cuoi"
     },
     {
       "id": 12,
@@ -108,7 +119,8 @@
       "price": 37000000,
       "rating": 4.7,
       "shortDesc": "Váy cưới satin trắng trơn, dáng A cổ điển với thiết kế tối giản nhưng vẫn toát lên vẻ thanh lịch và cao cấp.",
-      "tags": ["Satin", "Tối giản", "Thanh lịch"]
+      "tags": ["Satin", "Tối giản", "Thanh lịch"],
+      "category": "dam-cuoi"
     },
     {
       "id": 13,
@@ -117,7 +129,8 @@
       "price": 52000000,
       "rating": 5.0,
       "shortDesc": "Váy cưới đuôi dài lộng lẫy với ren thêu thủ công, chi tiết hoàng gia tinh xảo dành cho những nàng dâu muốn tỏa sáng.",
-      "tags": ["Hoàng gia", "Ren thêu", "Sang trọng"]
+      "tags": ["Hoàng gia", "Ren thêu", "Sang trọng"],
+      "category": "dam-cuoi"
     },
     {
       "id": 14,
@@ -126,7 +139,8 @@
       "price": 48000000,
       "rating": 4.9,
       "shortDesc": "Lớp voan mềm mại đính ngọc trai tinh tế, phần tùng váy bồng nhẹ và cổ trái tim mang lại vẻ đẹp ngọt ngào và đẳng cấp.",
-      "tags": ["Ngọc trai", "Voan", "Ngọt ngào"]
+      "tags": ["Ngọc trai", "Voan", "Ngọt ngào"],
+      "category": "dam-cuoi"
     },
     {
       "id": 15,
@@ -135,7 +149,8 @@
       "price": 42000000,
       "rating": 4.9,
       "shortDesc": "Thiết kế dáng công chúa bồng bềnh với chất liệu ren trắng cao cấp, cổ vuông thanh lịch và tay phồng nhẹ nhàng tạo nét kiêu sa.",
-      "tags": ["Sang trọng", "Công chúa", "Ren"]
+      "tags": ["Sang trọng", "Công chúa", "Ren"],
+      "category": "dam-cuoi"
     },
     {
       "id": 16,
@@ -144,7 +159,165 @@
       "price": 46000000,
       "rating": 4.8,
       "shortDesc": "Form đuôi cá ôm sát tôn dáng, phần vai trễ hở nhẹ cùng chi tiết đính đá tinh xảo mang lại vẻ đẹp gợi cảm và quý phái.",
-      "tags": ["Sang trọng", "Đuôi cá", "Đính đá"]
-    }
+      "tags": ["Sang trọng", "Đuôi cá", "Đính đá"],
+      "category": "dam-cuoi"
+    },
+    {
+    "id": 21,
+    "name": "Áo Dài Ngọc Tâm",
+    "images": ["/aodai/aodai1.jpg"],
+    "price": 9000000,
+    "oldPrice": 14000000,
+    "rating": 4.8,
+    "shortDesc": "Lụa trắng thanh khiết, thêu tay tinh xảo, tôn nét dịu dàng cho cô dâu ngày vu quy.",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+    "id": 22,
+    "name": "Áo Dài Phượng Vân",
+    "images": ["/aodai/aodai2.jpg"],
+    "price": 10000000,
+    "rating": 4.8,
+    "shortDesc": "Sắc đỏ rực rỡ, thêu tay họa tiết phượng hoàng và hoa văn tinh xảo. Tà áo mềm mại, tôn vẻ kiêu sa và quyền quý cho cô dâu.",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+    "id": 23,
+    "name": "Áo Dài Phượng Vân & Áo Gấm Thiên Hồng",
+    "images": ["/aodai/aodai3.jpg"],
+    "price": 8000000,
+    "rating": 4.8,
+    "shortDesc": "Cặp áo cưới truyền thống sắc hồng pastel, thêu tay họa tiết hoa và chim phượng tinh xảo. Tà áo mềm mại, tôn nét thanh lịch và sang trọng cho cô dâu – chú rể",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+    "id": 24,
+    "name": "Áo Dài Cưới Bảo Vân",
+    "images": ["/aodai/aodai4.jpg"],
+    "price": 27000000,
+    "oldPrice": 32000000,
+    "rating": 4.8,
+    "shortDesc": "Sắc đỏ quyền quý, thêu hoa và lông vũ tinh xảo cho cô dâu, phối tua rua truyền thống cho chú rể, mây lành nâng bước, khởi đầu viên mãn cho đôi uyên ương.",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+    "id": 25,
+    "name": "Áo Dài Cưới Hồng Long",
+    "images": ["/aodai/aodai5.jpg"],
+    "price": 5000000,
+    "rating": 4.8,
+    "shortDesc": "Cặp áo dài đỏ thêu phượng hoàng tinh xảo, tôn vẻ kiêu sa và trang trọng. Thiết kế truyền thống cho lễ vu quy đậm chất văn hóa Việt.",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+    "id": 26,
+    "name": "Áo Dài Cưới Hồng Phụng",
+    "images": ["/aodai/aodai6.jpg"],
+    "price": 10000000,
+    "rating": 4.8,
+    "shortDesc": "Cặp áo dài sắc hồng pastel, thêu rồng và hoa đỏ nổi bật. Thiết kế cổ cao, tay dài, tôn vẻ trang nghiêm và thanh lịch.",
+    "tags": ["Handmade", "Limited"],
+     "category": "ao-dai"
+  },
+  {
+  "id": 31,
+  "name": "Giày Cưới Bella Belle",
+  "images": ["/giay/giay1.jpg"],
+  "price": 3500000,
+  "oldPrice": 4500000,
+  "rating": 4.9,
+  "shortDesc": "Giày cưới ren trắng thanh lịch, điểm nơ tinh tế, mang lại vẻ duyên dáng cho cô dâu.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-giaycuoi"
+  },
+  {
+  "id": 32,
+  "name": "Giày Cưới Moonlight Blossom",
+  "images": ["/giay/giay1.jpg"],
+  "price": 4000000,
+  "rating": 4.9,
+  "shortDesc": "Thiết kế mũi nhọn phủ kim tuyến, điểm hoa ngọc tinh xảo. Vẻ đẹp thanh thoát như ánh trăng dịu dàng, nâng bước cô dâu trong khoảnh khắc thiêng liêng.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-giaycuoi"
+  },
+  {
+  "id": 33,
+  "name": "Giày Cưới Crystal Belle",
+  "images": ["/giay/giay1.jpg"],
+  "price": 3500000,
+  "oldPrice": 4500000,
+  "rating": 4.9,
+  "shortDesc": "Thiết kế lưới trong suốt, điểm nơ pha lê lấp lánh. Thanh thoát, kiêu sa, dành riêng cho nàng thơ ngày cưới.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-giaycuoi"
+  },
+  {
+  "id": 41,
+  "name": "Veil Luna Bloom",
+  "images": ["/voan/1.jpg"],
+  "price": 1000000,
+  "rating": 4.9,
+  "shortDesc": "Voan trắng mỏng nhẹ, điểm hoa nổi tinh xảo. Thanh khiết như ánh trăng, tôn vẻ dịu dàng cho nàng dâu.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-khanvoan"
+  },
+  {
+  "id": 42,
+  "name": "Veil Celeste",
+  "images": ["/voan/2.jpg"],
+  "price": 700000,
+  "oldPrice": 1100000,
+  "rating": 4.9,
+  "shortDesc": "Voan trắng mỏng nhẹ, điểm hoa trắng tinh khôi. Tựa mây trời ôm lấy nàng trong khoảnh khắc thiêng liêng.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-khanvoan"
+  },
+  {
+  "id": 43,
+  "name": "Veil Rose Étoile",
+  "images": ["/voan/3.jpg"],
+  "price": 800000,
+  "rating": 4.9,
+  "shortDesc": "Voan dài thêu hoa nổi, nhẹ như ánh sao, ôm lấy nàng trong khoảnh khắc nhiệm màu.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-khanvoan"
+  },
+  {
+  "id": 51,
+  "name": "Tiara Luna Grace",
+  "images": ["/vuongmien/vm1.jpg"],
+  "price": 3000000,
+  "rating": 4.9,
+  "shortDesc": "Thiết kế đối xứng, đính pha lê lấp lánh như ánh trăng. Vẻ đẹp thanh cao, tôn nét kiêu sa cho nàng trong ngày trọng đại.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-vuongmien"
+  },
+  {
+  "id": 52,
+  "name": "Celeste Bloom",
+  "images": ["/vuongmien/vm2.jpg"],
+  "price": 4000000,
+  "oldPrice": 5500000,
+  "rating": 4.9,
+  "shortDesc": "Vương miện ánh bạc, đính đá tinh xảo. Nhẹ nhàng, kiêu sa, dành riêng cho nàng trong khoảnh khắc rạng ngời.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-vuongmien"
+  },
+  {
+  "id": 53,
+  "name": "Velvet Pearl",
+  "images": ["/vuongmien/vm3.jpg"],
+  "price": 5000000,
+  "oldPrice": 7500000,
+  "rating": 4.9,
+  "shortDesc": "Voan dài thêu hoa nổi, nhẹ như ánh sao, ôm lấy nàng trong khoảnh khắc nhiệm màu.",
+  "tags": ["Handmade", "Luxury"],
+  "category": "phu-kien-vuongmien"
+  }
   ]
 }
