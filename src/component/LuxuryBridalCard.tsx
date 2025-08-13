@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 
 export interface Product {
@@ -33,6 +33,12 @@ const navigate=useNavigate();
   const handleFavoriteClick = () => {
     setIsFavorite(true);
   };
+
+  // useEffect(()=>{
+  //   console.log(product)
+  // },[product])
+
+  if(!product) return <div>...</div>
 
   return (
     <div className={`card h-100 shadow-sm border-0 ${className}`} style={{ borderRadius: 12 }}>
@@ -133,7 +139,7 @@ const navigate=useNavigate();
           <div className="d-flex gap-2">
           <button
                 className="btn btn-outline-dark flex-grow-1"
-                onClick={() => navigate(`/trangchitiet/${product.id}`)}
+                onClick={() => navigate(`/trangchitiet?id=${product.id}`)}
               >
                 Xem
               </button>
