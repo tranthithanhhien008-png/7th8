@@ -1,0 +1,20 @@
+/* Áp dụng cho hình ảnh */
+.carousel-item img {
+  object-fit: cover;
+}
+
+/* Hiệu ứng điều khiển */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  padding: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+

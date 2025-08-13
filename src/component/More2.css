@@ -1,0 +1,61 @@
+/* More2.css */
+
+/* Toàn bộ khối More2 */
+.more2-container {
+  max-width: 1200px;
+}
+
+/* Phần văn bản bên trái */
+.more2-text-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Playfair Display', serif; /* font sang trọng */
+}
+
+.more2-text {
+  padding-right: 1.5rem;
+}
+
+/* Tiêu đề chính */
+.more2-text h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tiêu đề phụ */
+.more2-text h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* Đoạn văn */
+.more2-text p {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Ảnh bên phải */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .more2-text {
+    padding: 10px 0;
+  }
+  .more2-text h2 {
+    font-size: 1.8rem;
+  }
+  .more2-text h5 {
+    font-size: 1rem;
+  }
+}
