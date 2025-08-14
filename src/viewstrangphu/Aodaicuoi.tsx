@@ -40,7 +40,8 @@ export default function Aodaicuoi() {
   return (
     <>
       <Headers />
-      <div className="container mt-4">
+      <div className="container py-5">
+        <h2 className="text-center mb-4">Bộ Sưu Tập Áo Dài Cưới Thanh Lịch</h2>
         {/* Tiêu đề + thanh tìm kiếm/ lọc */}
         <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
           <h2 className="mb-0">Áo Dài Cưới</h2>

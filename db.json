@@ -257,97 +257,58 @@
       "category": "dam-cuoi"
     },
     {
-      "id": "21",
-      "name": "Áo Dài Ngọc Tâm",
-      "images": [
-        "/aodai/aodai1.jpg"
-      ],
-      "price": 9000000,
-      "oldPrice": 14000000,
-      "rating": 4.8,
-      "shortDesc": "Lụa trắng thanh khiết, thêu tay tinh xảo, tôn nét dịu dàng cho cô dâu ngày vu quy.",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
-    {
-      "id": "22",
-      "name": "Áo Dài Phượng Vân",
-      "images": [
-        "/aodai/aodai2.jpg"
-      ],
-      "price": 10000000,
-      "rating": 4.8,
-      "shortDesc": "Sắc đỏ rực rỡ, thêu tay họa tiết phượng hoàng và hoa văn tinh xảo. Tà áo mềm mại, tôn vẻ kiêu sa và quyền quý cho cô dâu.",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
-    {
-      "id": "23",
-      "name": "Áo Dài Phượng Vân & Áo Gấm Thiên Hồng",
-      "images": [
-        "/aodai/aodai3.jpg"
-      ],
-      "price": 8000000,
-      "rating": 4.8,
-      "shortDesc": "Cặp áo cưới truyền thống sắc hồng pastel, thêu tay họa tiết hoa và chim phượng tinh xảo. Tà áo mềm mại, tôn nét thanh lịch và sang trọng cho cô dâu – chú rể",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
-    {
-      "id": "24",
-      "name": "Áo Dài Cưới Bảo Vân",
-      "images": [
-        "/aodai/aodai4.jpg"
-      ],
-      "price": 27000000,
-      "oldPrice": 32000000,
-      "rating": 4.8,
-      "shortDesc": "Sắc đỏ quyền quý, thêu hoa và lông vũ tinh xảo cho cô dâu, phối tua rua truyền thống cho chú rể, mây lành nâng bước, khởi đầu viên mãn cho đôi uyên ương.",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
-    {
-      "id": "25",
-      "name": "Áo Dài Cưới Hồng Long",
-      "images": [
-        "/aodai/aodai5.jpg"
-      ],
-      "price": 5000000,
-      "rating": 4.8,
-      "shortDesc": "Cặp áo dài đỏ thêu phượng hoàng tinh xảo, tôn vẻ kiêu sa và trang trọng. Thiết kế truyền thống cho lễ vu quy đậm chất văn hóa Việt.",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
-    {
-      "id": "26",
-      "name": "Áo Dài Cưới Hồng Phụng",
-      "images": [
-        "/aodai/aodai6.jpg"
-      ],
-      "price": 10000000,
-      "rating": 4.8,
-      "shortDesc": "Cặp áo dài sắc hồng pastel, thêu rồng và hoa đỏ nổi bật. Thiết kế cổ cao, tay dài, tôn vẻ trang nghiêm và thanh lịch.",
-      "tags": [
-        "Handmade",
-        "Limited"
-      ],
-      "category": "ao-dai"
-    },
+  "id": "21",
+  "name": "Áo Dài Long Phượng Hỉ Hoan",
+  "images": ["/aodai/aodai1.jpg"],
+  "price": 9000000,
+  "oldPrice": 14000000,
+  "rating": 4.8,
+  "shortDesc": "Thanh khiết, thêu tay tinh xảo, tôn nét dịu dàng cho cô dâu ngày vu quy.",
+  "tags": ["Handmade", "Limited"],
+  "category": "ao-dai"
+},
+{
+  "id": "22",
+  "name": "Áo Dài Thiết Kế Độc Quyền Cho Dâu Nhà HAH",
+  "images": ["/aodai/aodai2.jpg"],
+  "price": 10000000,
+  "rating": 4.8,
+  "shortDesc": "Sắc đỏ rực rỡ, thêu tay họa tiết phượng hoàng và hoa văn tinh xảo. Tà áo mềm mại, tôn vẻ kiêu sa và quyền quý cho cô dâu.",
+  "tags": ["Handmade", "Limited"],
+  "category": "ao-dai"
+},
+{
+  "id": "23",
+  "name": "Áo Dài Song Hỉ Mơn Hoa",
+  "images": ["/aodai/aodai4.jpg"],
+  "price": 8000000,
+  "rating": 4.8,
+  "shortDesc": "Cặp áo cưới truyền thống sắc hồng pastel, thêu tay họa tiết hoa và chim phượng tinh xảo. Tà áo mềm mại, tôn nét thanh lịch và sang trọng cho cô dâu – chú rể",
+  "tags": ["Handmade", "Limited"],
+  "category": "ao-dai"
+},
+{
+  "id": "24",
+  "name": "Áo Dài Song Hỷ Lâm Môn",
+  "images": ["/aodai/aodai5.jpg"],
+  "price": 27000000,
+  "oldPrice": 32000000,
+  "rating": 4.8,
+  "shortDesc": "Sắc đỏ quyền quý, thêu hoa và lông vũ tinh xảo cho cô dâu, phối tua rua truyền thống cho chú rể, mây lành nâng bước, khởi đầu viên mãn cho đôi uyên ương.",
+  "tags": ["Handmade", "Limited"],
+  "category": "ao-dai"
+},
+{
+  "id": "25",
+  "name": "Áo Dài Kỳ Công Minh Phượng",
+  "images": ["/aodai/aodai6.jpg"],
+  "price": 5000000,
+  "rating": 4.8,
+  "shortDesc": "Cặp áo dài đỏ thêu phượng hoàng tinh xảo, tôn vẻ kiêu sa và trang trọng. Thiết kế truyền thống cho lễ vu quy đậm chất văn hóa Việt.",
+  "tags": ["Handmade", "Limited"],
+  "category": "ao-dai"
+},
+
     {
       "id": "31",
       "name": "Giày Cưới Bella Belle",
@@ -368,7 +329,7 @@
       "id": "32",
       "name": "Giày Cưới Moonlight Blossom",
       "images": [
-        "/giay/giay1.jpg"
+        "/giay/giay2.jpg"
       ],
       "price": 4000000,
       "rating": 4.9,
@@ -383,7 +344,7 @@
       "id": "33",
       "name": "Giày Cưới Crystal Belle",
       "images": [
-        "/giay/giay1.jpg"
+        "/giay/giay3.jpg"
       ],
       "price": 3500000,
       "oldPrice": 4500000,

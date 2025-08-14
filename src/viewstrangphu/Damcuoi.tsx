@@ -39,7 +39,8 @@ export default function Damcuoi() {
   return (
     <>
       <Headers />
-      <div className="container mt-4">
+     <div className="container py-5">
+        <h2 className="text-center mb-4">Bộ Sưu Tập Đầm Cưới Sang Trọng</h2>
         {/* Tiêu đề + thanh tìm kiếm/ lọc */}
         <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
           <h2 className="mb-0">Đầm Cưới</h2>
