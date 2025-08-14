@@ -97,7 +97,7 @@ const Headers: React.FC = () => {
 
 
              <li className="nav-item">
-              <a className="nav-link" href="#"><i className="bi bi-headset"></i></a>
+              <a className="nav-link" href="/lienhe"><i className="bi bi-headset"></i></a>
             </li>
           </ul>
         </div>

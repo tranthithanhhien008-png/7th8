@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import LuxuryBridalCard, { Product } from "../component/LuxuryBridalCard";
 import Headers from "../containers/Headers";
+import Footer from "../containers/Footer";
 
 export default function Damcuoi() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -97,7 +98,8 @@ export default function Damcuoi() {
             ))}
           </div>
         )}
-      </div>
+      </div><br/>
+      <Footer/>
     </>
   );
 }

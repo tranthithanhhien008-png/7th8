@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Headers from "../containers/Headers";
 import LuxuryBridalCard, { Product } from "../component/LuxuryBridalCard";
+import Footer from "../containers/Footer";
 
 const Giaycuoi = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -47,7 +48,7 @@ const Giaycuoi = () => {
     <>
       <Headers />
       <div className="container py-5">
-        <h2 className="text-center mb-4">Bộ Sưu Tập Giày Cưới Sang Trọng</h2>
+        <h2 className="text-center mb-4">Bộ Sưu Tập Khăn Voan Nhẹ Nhàng</h2>
 
         {/* Tìm kiếm và lọc */}
         <div className="d-flex justify-content-between align-items-center mb-4 gap-2">
@@ -137,7 +138,8 @@ const Giaycuoi = () => {
             </li>
           </ul>
         </nav>
-      </div>
+      </div><br/>
+      <Footer/>
     </>
   );
 };
